@@ -1,11 +1,12 @@
 library(fs)
 library(purrr)
 
-dir_ls("data/") |> 
-  purrr::walk(file_delete)
+cleanup <- function(dir_path) {
+  if (!dir_exists(dir_path)) dir_create(dir_path)
+  
+  dir_ls(dir_path) |> 
+    purrr::walk(file_delete)
+}
 
-dir_ls("actuel/") |> 
-  purrr::walk(file_delete)
-
-dir_ls("results/") |> 
-  purrr::walk(file_delete)
+c("data", "actuel", "results") |> 
+  purrr::walk(cleanup)
