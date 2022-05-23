@@ -85,8 +85,9 @@ current_classes <- function(...) {
 }
 
 drive_get("Concours/Datafiles/Avenches") |> 
-  read_sheet() |>
+  read_sheet() |> 
   dplyr::mutate(`Épreuve` = as.character(`Épreuve`)) |> 
+  dplyr::mutate(Actuel = as.character(Actuel)) |> 
   dplyr::mutate(Actuel = dplyr::if_else(is.na(Actuel), "", Actuel)) -> classes
 
 dir_ls(here("data")) -> results
