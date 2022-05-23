@@ -1,6 +1,7 @@
 project:
   type: website
   pre-render:
+    - R/cleanup.R
     - R/fetch.R
     - R/setup.R
 
