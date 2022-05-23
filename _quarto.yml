@@ -1,0 +1,34 @@
+project:
+  type: website
+  pre-render:
+    - R/fetch.R
+    - R/setup.R
+
+website:
+  title: "CD Avenches 2022"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: actuel/Carré_A.qmd
+      - href: actuel/Carré_B.qmd
+  page-footer:
+    left:
+      - text: "EquiEvents"
+    right: 
+      - text: "info@equievents.ch"
+        href: "mailto:info@equievents.ch"
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    lang: fr
+    execute:
+      echo: false
+      warning: false
+
+editor: visual
+

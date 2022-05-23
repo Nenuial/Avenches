@@ -1,0 +1,15 @@
+---
+title: PRIX Agroscope, Haras national suisse HNS, Avenches
+subtitle: Catégorie - Epreuve jeunes chevaux de 4 et 5 ans (jugement en commun)
+Epreuve: '1'
+order: 101.0
+params:
+  result_file: /Users/pascalburkhard/Dropbox/Concours/EquiEvents packages/Avenches/data/Résultats_1.xls
+  result_ongoing: yes
+---
+
+::: column-page
+```{r}
+rsvps::event_dr_results(here::here(params$result_file), params$result_ongoing)
+```
+:::

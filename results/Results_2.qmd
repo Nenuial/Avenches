@@ -1,0 +1,15 @@
+---
+title: PRIX Loterie Romande, Fribourg
+subtitle: Catégorie - JC 02/60 pour chevaux de 4 + 5 ans
+Epreuve: '2'
+order: 102.0
+params:
+  result_file: /Users/pascalburkhard/Dropbox/Concours/EquiEvents packages/Avenches/data/Résultats_2.xls
+  result_ongoing: yes
+---
+
+::: column-page
+```{r}
+rsvps::event_dr_results(here::here(params$result_file), params$result_ongoing)
+```
+:::
