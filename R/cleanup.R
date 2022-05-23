@@ -10,3 +10,5 @@ cleanup <- function(dir_path) {
 
 c("data", "actuel", "results") |> 
   purrr::walk(cleanup)
+
+dir_delete("_site")
