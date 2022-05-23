@@ -11,4 +11,4 @@ cleanup <- function(dir_path) {
 c("data", "actuel", "results") |> 
   purrr::walk(cleanup)
 
-dir_delete("_site")
+if (dir_exists("_site")) dir_delete("_site")
