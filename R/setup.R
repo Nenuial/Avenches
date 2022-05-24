@@ -53,6 +53,22 @@ carre_off <- function(carre) {
       )
     )
   )
+  
+  file_copy(path = here("_templates/Carre_pause.qmd"), 
+            new_path = here(paste0("actuel/", carre_filename, "_live.qmd")), 
+            overwrite = T) -> qmd_path
+  
+  yml_replace(
+    file = qmd_path,
+    what = list(
+      title = carre,
+      css = "../live.css",
+      "include-in-header" = "../live.html",
+      params = list(
+        carre = carre
+      )
+    )
+  )
 }
 
 current_classes <- function(...) {
@@ -77,6 +93,22 @@ current_classes <- function(...) {
     what = list(
       title = dots$Actuel,
       subtitle = paste(dots$Nom, "-", dots$Catégorie),
+      params = list(
+        result_file = result_path
+      )
+    )
+  )
+  
+  file_copy(path = here("_templates/Carre_result.qmd"),
+            new_path = here(paste0("actuel/", carre_filename, "_live.qmd")), 
+            overwrite = T) -> qmd_path
+  
+  yml_replace(
+    file = qmd_path,
+    what = list(
+      title = dots$Actuel,
+      subtitle = paste(dots$Nom, "-", dots$Catégorie),
+      css = "../live.css",
       params = list(
         result_file = result_path
       )
