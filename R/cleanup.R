@@ -12,3 +12,4 @@ c("data", "actuel", "results") |>
   purrr::walk(cleanup)
 
 if (dir_exists("_site")) dir_delete("_site")
+if (dir_exists(".quarto")) dir_delete(".quarto")
