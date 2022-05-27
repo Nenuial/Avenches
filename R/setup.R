@@ -109,6 +109,7 @@ current_classes <- function(...) {
       title = dots$Actuel,
       subtitle = paste(dots$Nom, "-", dots$Catégorie),
       css = "../live.css",
+      "include-in-header" = "../live.html",
       params = list(
         result_file = result_path
       )
