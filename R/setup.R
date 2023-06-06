@@ -36,7 +36,8 @@ setup_classes <- function(result_path) {
 }
 
 carre_off <- function(carre) {
-  carre_filename <- stringr::str_replace(carre, " ", "_")
+  carre_filename <- stringr::str_replace(carre, " ", "_") |> 
+    stringr::str_replace("é", "e")
   
   file_copy(path = here("_templates/Carre_pause.qmd"), 
             new_path = here(paste0("actuel/", carre_filename, ".qmd")), 
@@ -80,7 +81,8 @@ current_classes <- function(...) {
   
   if (length(result_path) == 0) return()
   
-  carre_filename <- stringr::str_replace(dots$Actuel, " ", "_")
+  carre_filename <- stringr::str_replace(dots$Actuel, " ", "_") |> 
+    stringr::str_replace("é", "e")
   
   file_copy(path = here("_templates/Carre_result.qmd"),
             new_path = here(paste0("actuel/", carre_filename, ".qmd")), 
