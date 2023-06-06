@@ -3,6 +3,7 @@ title: Placeholder
 subtitle: Placeholder
 Epreuve: 0
 order: 0
+engine: knitr
 params:
   result_file: result/null.ext
   result_ongoing: false
