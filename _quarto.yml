@@ -14,7 +14,8 @@ website:
     left:
       - href: index.qmd
         text: Accueil
-      - href: actuel/Carré_A.qmd
+      - href: actuel/Carre_A.qmd
+      - href: actuel/Carre_B.qmd
   page-footer:
     left:
       - text: "EquiEvents"
