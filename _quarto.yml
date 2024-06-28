@@ -8,7 +8,7 @@ project:
     - R/finish.R
 
 website:
-  title: "CD Avenches 2023"
+  title: "CD Avenches 2024"
   navbar:
     background: "#00513a"
     left:
