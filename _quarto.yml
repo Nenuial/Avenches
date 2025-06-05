@@ -5,10 +5,10 @@ project:
     - R/fetch.R
     - R/setup.R
   post-render:
-    - R/finish.R
+    - ./deploy.sh
 
 website:
-  title: "CD Avenches 2024"
+  title: "CD Avenches 2025"
   navbar:
     background: "#00513a"
     left:

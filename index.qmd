@@ -8,4 +8,4 @@ listing:
   fields: [Epreuve, title]
 ---
 
-Vous trouverez sur ce site les résultats pour les épreuves du concours de dressage d'Avenches du 28 au 30 juin.
+Vous trouverez sur ce site les résultats pour les épreuves du concours de dressage d'Avenches du 6 au 8 juin.
